@@ -1,31 +1,184 @@
-h1 {
-  color: white;
-  /* Adicionar mais estilos conforme necessário */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+.menu {
+  background-color: #111; /* Fundo escuro */
+  padding: 20px 0; /* Espaçamento superior e inferior */
+  position: relative; /* Fixa no topo da tela */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Mantém o header acima de outros elementos */
+  box-shadow: 0px 4px 6px rgba(0, 255, 255, 0.2);
+  display: flex;
+  justify-content:center;
+}
+
+.nome-topo {
+  color: #00ffff;
+  font-weight: bold;
+  font-size: 24px;
+  text-align:left;
+  margin-left: 20px;
+}
+
+.apresentacao {
+  margin: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.descricao {
+  max-width: 600px;
+  margin-right: 20px;
+  font-family: 'Krona One', sans-serif;
+}
+
+/* Centralizar menu de navegação */
+nav {
+  display: flex;
+  justify-content: center; /* Alinha os itens ao centro */
+}
+
+/* Estilização da lista do menu */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
+/* Links do menu */
+nav ul li a {
+  text-decoration: none;
+  color: #00ffff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Efeito de hover */
+nav ul li a:hover {
+  background-color: #00ffff;
+  color: black;
+}
+
+/* Ajuste para telas menores 
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+*/
+
+/* Estilização geral */
 body {
+  height: 100vh;
+  box-sizing: border-box;
   background-color: black;
-  /* Adicionar mais estilos conforme necessário */
+  color: #00ffff;
+  font-family: Arial, sans-serif; /* Define uma fonte padrão */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+/* Imagens */
+img {
+  width: 350px;  /* Largura fixa */
+  height: 350px; /* Altura fixa */
+  object-fit: cover; /* Garante que a imagem se ajuste sem distorção */
+  border-radius: 50%; /* Deixa a imagem redonda (opcional) */
+}
+
+
+/* Cabeçalhos */
+h1 {
+  color: #00ffff;
+  font-weight: bold;
+  text-align: center; /* Centraliza o título */
+  font-size: 2rem;
+}
+
+/* Parágrafos */
 p {
-  color: white;
-  /* Adicionar mais estilos conforme necessário */
+  line-height: 1.6; /* Melhora a leitura */
+  text-align: justify;
 }
+
+/* Links */
+a {
+  color: DodgerBlue;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: LightSkyBlue; /* Cor ao passar o mouse */
+  text-decoration: underline;
+}
+
+/* Botões */
 button {
   background-color: DarkSlateBlue;
   color: white;
   border: none;
-  /* Adicionar mais estilos conforme necessário */
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: 0.3s;
 }
-img {
-  /* Adicionar estilos para formatar a imagem */
+
+button:hover {
+  background-color: MediumSlateBlue;
 }
-/* Adicionar mais estilos conforme necessário */
+
+/* Destaques */
+span {
+  color: #22D4FD;
+  font-weight: bold;
+}
+
+/* Rodapé */
 footer {
   background-color: DarkSlateBlue;
   color: white;
-
+  text-align: center;
+  padding: 10px;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
 }
-a {
-  color: DodgerBlue;
 
+/* Botão Download CV */
+.btn-download {
+  background-color: #22D4FD;  /* Azul vibrante */
+  color: black;
+  font-weight: bold;
+  text-align: right;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 255, 255, 0.3);
 }
+
+.btn-download:hover {
+  background-color: #00BFFF; /* Azul mais escuro no hover */
+  box-shadow: 0px 6px 10px rgba(0, 255, 255, 0.5);
+}
+
