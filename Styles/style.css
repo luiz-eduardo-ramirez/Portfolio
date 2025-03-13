@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 
 .menu {
@@ -21,10 +21,11 @@
 .nome-topo {
   color: white;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 32px;
   text-align:left;
-  margin-left: 20px;
   background-color: black;
+  margin: 20px;
+  justify-content: center;
 }
 
 
@@ -36,33 +37,129 @@
   justify-content: space-between;
 }
 
+.titulo-redes{
+  font-family: 'Krona One', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
 .redes-sociais {
   margin-top: 20px;
   display: flex;
   gap: 10px;
   justify-content: space-between;
+  flex-direction:row;
 }
 
 .links {
   text-decoration: none;
-  padding: 21.5px 0;
-  font-weight: bold;
-  font-size: 16px;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
   transition: 0.3s;
-  padding: 10px 15px;
   border-radius: 5px;
-  background-color: #22D4FD;
   width: 280px;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 16px;
   color: white;
+  border: #22D4FD 2px solid;
+  margin: 1%;
+  border-style: solid;
+  transition: 0.3s;
 }
+
+.links:hover {
+  color: LightSkyBlue; /* Cor ao passar o mouse */
+  text-decoration: none;
+  background-color: #272727;
+  cursor: pointer;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.links img {
+  width: 16px;  /* Define um tamanho fixo para a imagem */
+  height: 16px; /* Mantém a proporção */
+  object-fit: contain; /* Garante que a imagem não fique distorcida */
+  border-radius: 0;
+}
+
+.projetos{
+  text-decoration: none;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: white;
+  border: #22D4FD 2px solid;
+  border-style: solid;
+  transition: 0.3s;
+  align-items: center;
+}
+
+.projetos img{
+  text-decoration: none;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  color: white;
+  margin: 1%;
+  transition: 0.3s;
+}
+  
+.projetos img{
+  width: 32px;  /* Define um tamanho fixo para a imagem */
+  height: 32px; /* Mantém a proporção */
+  object-fit: contain; /* Garante que a imagem não fique distorcida */
+  border-radius: 0;
+}
+
+
+.projetos:hover{
+    color: LightSkyBlue; /* Cor ao passar o mouse */
+    text-decoration: none;
+    background-color: #272727;
+    cursor: pointer;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+  
 
 .descricao {
   max-width: 600px;
   margin-right: 20px;
   font-family: 'Krona One', sans-serif; 
+  color: white;
 }
 
 /* Centralizar menu de navegação */
@@ -131,46 +228,10 @@ img {
   border-radius: 50%; /* Deixa a imagem redonda (opcional) */
 }
 
-
-/* Cabeçalhos */
-h1 {
-  color: #00ffff;
-  font-weight: bold;
-  text-align: center; /* Centraliza o título */
-  font-size: 2rem;
-}
-
 /* Parágrafos */
 p {
   line-height: 1.6; /* Melhora a leitura */
   text-align: justify;
-}
-
-/* Links */
-a {
-  color: DodgerBlue;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-a:hover {
-  color: LightSkyBlue; /* Cor ao passar o mouse */
-  text-decoration: underline;
-}
-
-/* Botões */
-button {
-  background-color: DarkSlateBlue;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px; /* Bordas arredondadas */
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: MediumSlateBlue;
 }
 
 /* Destaques */
@@ -188,11 +249,16 @@ footer {
   position:fixed;
   bottom: 0;
   width: 100%;
+  font-family: 'monteserrat', sans-serif;
 }
 
 /* Botão Download CV */
-.btn-download {
+.cv-download {
   background-color: #22D4FD;  /* Azul vibrante */
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  display: inline-block;
   color: black;
   font-weight: bold;
   text-align: right;
@@ -204,7 +270,8 @@ footer {
 }
 
 .btn-download:hover {
-  background-color: #00BFFF; /* Azul mais escuro no hover */
+  background-color: #272727; /* Azul mais escuro no hover */
   box-shadow: 0px 6px 10px rgba(0, 255, 255, 0.5);
+  color: #272727;
 }
 
