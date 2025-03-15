@@ -11,17 +11,16 @@
 * {
   margin: 0;
   padding: 0;
-  /*box-sizing: border-box;*/
 }
 
 .menu {
-  background-color: var(--cor-principal); /* Fundo escuro */
-  padding: 20px 0; /* Espaçamento superior e inferior */
-  position: relative; /* Fixa no topo da tela */
+  background-color: var(--cor-principal);
+  padding: 20px 0; 
+  position: relative;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000; /* Mantém o header acima de outros elementos */
+  z-index: 1000; 
   box-shadow: 0px 4px 6px rgba(0, 255, 255, 0.2);
   display: flex;
   justify-content:center;
@@ -81,7 +80,7 @@
 }
 
 .links:hover {
-  color: LightSkyBlue; /* Cor ao passar o mouse */
+  color: LightSkyBlue; 
   text-decoration: none;
   background-color: var(--cor-hover);
   cursor: pointer;
@@ -98,9 +97,9 @@
 }
 
 .links img {
-  width: 16px;  /* Define um tamanho fixo para a imagem */
-  height: 16px; /* Mantém a proporção */
-  object-fit: contain; /* Garante que a imagem não fique distorcida */
+  width: 16px;  
+  height: 16px; 
+  object-fit: contain; 
   border-radius: 0;
 }
 
@@ -168,22 +167,19 @@
   color: var(--cor-secundaria);
 }
 
-/* Centralizar menu de navegação */
 nav {
   display: flex;
-  justify-content: center; /* Alinha os itens ao centro */
+  justify-content: center; 
 }
 
-/* Estilização da lista do menu */
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 20px; /* Espaçamento entre os itens */
+  gap: 20px;
 }
 
-/* Links do menu */
 nav ul li a {
   text-decoration: none;
   color: var(--cor-terciaria);
@@ -194,13 +190,11 @@ nav ul li a {
   border-radius: 5px;
 }
 
-/* Efeito de hover */
 nav ul li a:hover {
   background-color: var(--cor-terciaria);
   color: var(--cor-hover);
 }
 
-/* Ajuste para telas menores 
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -212,41 +206,35 @@ nav ul li a:hover {
     gap: 10px;
   }
 }
-*/
 
-/* Estilização geral */
 body {
   height: 100vh;
   box-sizing: border-box;
   background-color: var(--cor-principal);
   color: var(--cor-terciaria);
-  font-family: Arial, sans-serif; /* Define uma fonte padrão */
+  font-family: Arial, sans-serif; 
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Imagens */
 img {
-  width: 350px;  /* Largura fixa */
-  height: 350px; /* Altura fixa */
-  object-fit: cover; /* Garante que a imagem se ajuste sem distorção */
-  border-radius: 50%; /* Deixa a imagem redonda (opcional) */
+  width: 350px;  
+  height: 350px; 
+  object-fit: cover; 
+  border-radius: 50%; 
 }
 
-/* Parágrafos */
 p {
-  line-height: 1.6; /* Melhora a leitura */
+  line-height: 1.6; 
   text-align: justify;
 }
 
-/* Destaques */
 span {
   color: var(--cor-terciaria);
   font-weight: bold;
 }
 
-/* Rodapé */
 footer {
   background-color: var(--cor-terciaria);
   color: var(--cor-principal);
@@ -258,7 +246,6 @@ footer {
   font-family: 'monteserrat', sans-serif;
 }
 
-/* Botão Download CV */
 .cv-download {
   background-color: var(--cor-terciaria);  
   position: absolute;
@@ -281,7 +268,6 @@ footer {
   color: #272727;
 }
 
-/* Estilização dos botões */
 .contato {
   text-align: left;
   margin: 20px 0;
@@ -306,7 +292,6 @@ footer {
   background-color: #0097a7;
 }
 
-/* Estilização do modal */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -352,7 +337,6 @@ footer {
   cursor: pointer;
 }
 
-/* Animação para suavizar a entrada */
 @keyframes fadeIn {
   from {
       opacity: 0;
