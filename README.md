@@ -8,14 +8,13 @@ Este repositório contém o código-fonte do portfólio pessoal de **Luiz Eduard
 - **CSS** - Estilização e responsividade
 - **JavaScript** - Interatividade e dinamismo
 
-
 ## 🎯 Funcionalidades
 
 ✅ Apresentação de projetos desenvolvidos  
 ✅ Seção sobre mim com detalhes profissionais  
 ✅ Contato direto por formulário ou redes sociais  
 ✅ Design responsivo para diferentes dispositivos  
-✅ Animações e transições suaves para melhor experiência do usuário  
+✅ Animações e transições suaves para melhor experiência do usuário
 
 ## 📌 Como Usar
 
@@ -31,18 +30,13 @@ Este repositório contém o código-fonte do portfólio pessoal de **Luiz Eduard
 
 ```
 📂 Portfolio
-├── 📄 index.html  # Página principal
-├── 📄 style.css   # Estilos do site
-├── 📄 script.js   # Lógica interativa
 ├── 📂 img      # Imagens e ícones
+├── 📂 docs      # Documentos
+├── 📂 Styles        # Estilos do site
+├── 📄 index.html  # Página principal
+├── 📄 script.js   # Lógica interativa
 └── 📄 README.md   # Documentação do repositório
 ```
-
-## 🔧 Melhorias Futuras
-
-- Implementação de um backend para gerenciamento dinâmico de projetos
-- Adição de um blog para compartilhar conteúdos e experiências
-- Otimização para SEO e melhor indexação nos buscadores
 
 ## 🤝 Contribuição
 
@@ -55,4 +49,3 @@ Este projeto é de uso livre para estudos e aprimoramento de habilidades em dese
 ---
 
 Feito por Luiz Eduardo Ramirez
-
