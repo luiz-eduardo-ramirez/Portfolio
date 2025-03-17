@@ -29,7 +29,7 @@
 .nome-topo {
   color: var(--cor-secundaria);
   font-weight: bold;
-  font-size: 32px;
+  font-size: 2rem;
   text-align:left;
   background-color: var(--cor-principal);
   margin: 20px;
@@ -48,7 +48,7 @@
 .titulo-redes{
   font-family: 'Krona One', sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin: 20px;
 }
 
@@ -65,7 +65,7 @@
   padding: 10px 0;
   text-align: center;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 1rem;
   transition: 0.3s;
   border-radius: 5px;
   width: 280px;
@@ -87,7 +87,7 @@
   padding: 10px 0;
   text-align: center;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 1rem;
   transition: 0.3s;
   border-radius: 5px;
   width: 280px;
@@ -108,7 +108,7 @@
   padding: 12px;
   text-align: center;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 1rem;
   transition: 0.3s;
   border-radius: 5px;
   width: 280px;
@@ -122,12 +122,14 @@
   align-items: center;
 }
 
+
 .projetos img{
   text-decoration: none;
   padding: 10px 0;
   text-align: center;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 1rem;
+  height: auto;
   transition: 0.3s;
   width: 32px;  
   height: 32px; 
@@ -142,6 +144,24 @@
 }
 
 
+.programando{
+  width: 50%;
+  text-decoration: none;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 600;
+  height: auto;
+  font-size: 1rem;
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  position: fixed;
+  height: auto;
+}
+
 .projetos:hover{
     color: LightSkyBlue; 
     text-decoration: none;
@@ -150,7 +170,7 @@
     padding: 10px 0;
     text-align: center;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 1rem;
     transition: 0.3s;
     border-radius: 5px;
     width: 280px;
@@ -166,6 +186,14 @@
   font-family: 'Krona One', sans-serif; 
   color: var(--cor-secundaria);
 }
+
+.foto-perfil {
+  width: 350px;  
+  height: 350px; 
+  object-fit: cover; 
+  border-radius: 50%; 
+}
+
 
 nav {
   display: flex;
@@ -184,7 +212,7 @@ nav ul li a {
   text-decoration: none;
   color: var(--cor-terciaria);
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.125rem;
   transition: 0.3s;
   padding: 10px 15px;
   border-radius: 5px;
@@ -193,18 +221,6 @@ nav ul li a {
 nav ul li a:hover {
   background-color: var(--cor-terciaria);
   color: var(--cor-hover);
-}
-
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
 }
 
 body {
@@ -216,13 +232,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-img {
-  width: 350px;  
-  height: 350px; 
-  object-fit: cover; 
-  border-radius: 50%; 
 }
 
 p {
@@ -283,7 +292,7 @@ footer {
   padding: 20px 0;
   margin: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: 5px;
   width: 280px;
 }
@@ -333,7 +342,7 @@ footer {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 18px;
+  font-size: 1.125rem;
   cursor: pointer;
 }
 
@@ -356,3 +365,53 @@ footer {
       opacity: 1;
   }
 }
+
+@media (max-width: 1200px) {
+  .apresentacao {
+    flex-direction: column;
+    text-align: center;
+    margin: 5%;
+  }
+
+  .descricao {
+    max-width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .foto-perfil {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .redes-sociais {
+    flex-direction: column;
+  }
+
+  .links {
+    width: 100%;
+  }
+
+  footer {
+    position: relative;
+    padding: 20px;
+  }
+
+  .rodape {
+    position: fixed;
+    padding: 20px;
+  }
+}
+
+
