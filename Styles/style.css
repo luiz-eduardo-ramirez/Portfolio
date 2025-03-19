@@ -11,6 +11,7 @@
 * {
   margin: 0;
   padding: 0;
+  
 }
 
 .menu {
@@ -43,6 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px
 }
 
 .titulo-redes{
@@ -144,24 +146,6 @@
 }
 
 
-.programando{
-  width: 50%;
-  text-decoration: none;
-  padding: 10px 0;
-  text-align: center;
-  font-weight: 600;
-  height: auto;
-  font-size: 1rem;
-  transition: 0.3s;
-  border-radius: 5px;
-  width: 280px;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  position: fixed;
-  height: auto;
-}
-
 .projetos:hover{
     color: LightSkyBlue; 
     text-decoration: none;
@@ -185,6 +169,7 @@
   margin-right: 20px;
   font-family: 'Krona One', sans-serif; 
   color: var(--cor-secundaria);
+  flex: 1;
 }
 
 .foto-perfil {
@@ -192,6 +177,17 @@
   height: 350px; 
   object-fit: cover; 
   border-radius: 50%; 
+}
+
+.programando {
+  width: 100%; /* Ajusta a largura para ocupar toda a área disponível */
+  max-width: 500px; /* Define um tamanho máximo para a imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 10px; /* Adiciona cantos arredondados */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Adiciona sombra para um efeito mais sofisticado */
+  display: block; /* Garante que a imagem não tenha margens indesejadas */
+  margin: 20px 0; /* Margem superior e inferior */
+  flex: 1; /* Permite que a imagem ocupe espaço proporcional ao lado do texto */
 }
 
 
@@ -223,7 +219,44 @@ nav ul li a:hover {
   color: var(--cor-hover);
 }
 
-body {
+.sobre-mim{
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--cor-principal);
+  color: var(--cor-terciaria);
+  font-family: Arial, sans-serif; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contato{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--cor-principal);
+  color: var(--cor-terciaria);
+  font-family: Arial, sans-serif; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.curriculo{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--cor-principal);
+  color: var(--cor-terciaria);
+  font-family: Arial, sans-serif; 
+  display: flex;
+  flex-direction: column;
+  min-height: 240vh;
+}
+
+.inicio{
   height: 100vh;
   box-sizing: border-box;
   background-color: var(--cor-principal);
@@ -277,10 +310,6 @@ footer {
   color: #272727;
 }
 
-.contato {
-  text-align: left;
-  margin: 20px 0;
-}
 
 .contato-btn {
   background-color: var(--cor-principal);
@@ -377,6 +406,7 @@ footer {
     max-width: 100%;
     margin: 0;
     text-align: center;
+    flex: 1;
   }
 
   .foto-perfil {
