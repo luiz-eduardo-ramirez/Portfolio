@@ -436,14 +436,14 @@ footer {
   
   .apresentacao {
     flex-direction: column;
-    text-align: center;
+    text-align:justify;
     margin: 5%;
   }
 
   .descricao {
     max-width: 100%;
     margin: 0;
-    text-align: center;
+    text-align: justify;
     flex: 1;
   }
 
