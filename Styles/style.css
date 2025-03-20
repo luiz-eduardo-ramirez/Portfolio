@@ -14,6 +14,13 @@
   
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-principal);
+}
+
 .menu {
   background-color: var(--cor-principal);
   padding: 20px 0; 
@@ -180,14 +187,14 @@
 }
 
 .programando {
-  width: 100%; /* Ajusta a largura para ocupar toda a área disponível */
-  max-width: 500px; /* Define um tamanho máximo para a imagem */
-  height: auto; /* Mantém a proporção da imagem */
-  border-radius: 10px; /* Adiciona cantos arredondados */
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Adiciona sombra para um efeito mais sofisticado */
-  display: block; /* Garante que a imagem não tenha margens indesejadas */
-  margin: 20px 0; /* Margem superior e inferior */
-  flex: 1; /* Permite que a imagem ocupe espaço proporcional ao lado do texto */
+  width: 100%; 
+  max-width: 500px; 
+  height: auto; 
+  border-radius: 10px; 
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
+  display: block; 
+  margin: 20px 0; 
+  flex: 1; 
 }
 
 
@@ -219,7 +226,9 @@ nav ul li a:hover {
   color: var(--cor-hover);
 }
 
-.sobre-mim{
+.inicio, 
+.sobre-mim,
+.contato{
   height: 100vh;
   box-sizing: border-box;
   background-color: var(--cor-principal);
@@ -230,18 +239,7 @@ nav ul li a:hover {
   min-height: 100vh;
 }
 
-.contato{
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  box-sizing: border-box;
-  background-color: var(--cor-principal);
-  color: var(--cor-terciaria);
-  font-family: Arial, sans-serif; 
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+
 
 .curriculo{
   margin: 0;
@@ -254,17 +252,6 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   min-height: 240vh;
-}
-
-.inicio{
-  height: 100vh;
-  box-sizing: border-box;
-  background-color: var(--cor-principal);
-  color: var(--cor-terciaria);
-  font-family: Arial, sans-serif; 
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 p {
@@ -330,6 +317,20 @@ footer {
   background-color: #0097a7;
 }
 
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -351,6 +352,10 @@ footer {
   transform: scale(0.8);
   opacity: 0;
   animation: scaleUp 0.3s forwards 0.1s;
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
 }
 
 .modal-overlay {
@@ -375,6 +380,13 @@ footer {
   cursor: pointer;
 }
 
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 @keyframes fadeIn {
   from {
       opacity: 0;
@@ -395,7 +407,30 @@ footer {
   }
 }
 
+@keyframes zoom {
+  from {
+    transform: scale(0);
+    }
+  to {
+    transform: scale(1);
+    }
+}
+
 @media (max-width: 1200px) {
+  .inicio, 
+  .sobre-mim, 
+  .contato, 
+  .curriculo {
+    height: 100vh;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: var(--cor-principal);
+    color: var(--cor-terciaria);
+    font-family: Arial, sans-serif; 
+    display: flex;
+    flex-direction: column;
+  }
+
   .apresentacao {
     flex-direction: column;
     text-align: center;
@@ -425,6 +460,7 @@ footer {
     gap: 10px;
   }
 
+  
   .redes-sociais {
     flex-direction: column;
   }
@@ -433,15 +469,10 @@ footer {
     width: 100%;
   }
 
+
   footer {
     position: relative;
     padding: 20px;
   }
-
-  .rodape {
-    position: fixed;
-    padding: 20px;
-  }
 }
-
 

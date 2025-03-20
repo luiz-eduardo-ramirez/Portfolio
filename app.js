@@ -30,4 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("btn-email").addEventListener("click", function () {
     openModal("E-mail: luizeduramirez@icloud.com");
   });
+
+  document.getElementById("btn-servicos").addEventListener("click", function() {
+    modalBody.innerHTML = <img src='img/servicos.jpg' alt='Meus Serviços' style='width:100%; height:auto;'>;
+    modal.style.display = "block";
 });
