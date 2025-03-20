@@ -14,7 +14,7 @@
   
 }
 
-html, body {
+ .html, .body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -417,6 +417,7 @@ footer {
 }
 
 @media (max-width: 1200px) {
+
   .inicio, 
   .sobre-mim, 
   .contato, 
@@ -431,6 +432,8 @@ footer {
     flex-direction: column;
   }
 
+
+  
   .apresentacao {
     flex-direction: column;
     text-align: center;
@@ -444,12 +447,14 @@ footer {
     flex: 1;
   }
 
+  
   .foto-perfil {
     width: 200px;
     height: 200px;
     margin-top: 20px;
   }
 
+  
   .menu {
     flex-direction: column;
     padding: 10px 0;
@@ -471,7 +476,7 @@ footer {
 
 
   footer {
-    position: relative;
+    position:static;
     padding: 20px;
   }
 }
