@@ -417,22 +417,52 @@ footer {
 }
 
 @media (max-width: 1200px) {
-
-  .inicio, 
-  .sobre-mim, 
-  .contato, 
+  
   .curriculo {
     height: 100vh;
-    min-height: 100vh;
+    min-height: 310vh;
     box-sizing: border-box;
     background-color: var(--cor-principal);
     color: var(--cor-terciaria);
-    font-family: Arial, sans-serif; 
+    font-family: Krona One, sans-serif;  
     display: flex;
     flex-direction: column;
   }
 
+  .inicio{
+    height: 100vh;
+    min-height: 130vh;
+    box-sizing: border-box;
+    background-color: var(--cor-principal);
+    color: var(--cor-terciaria);
+    font-family: Krona One, sans-serif; 
+    display: flex;
+    flex-direction: column;
+  }
 
+  
+  .sobre-mim {
+    height: 100vh;
+    min-height: 140vh;
+    box-sizing: border-box;
+    background-color: var(--cor-principal);
+    color: var(--cor-terciaria);
+    font-family: Krona One, sans-serif; 
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  .contato{
+    height: 100vh;
+    
+    box-sizing: border-box;
+    background-color: var(--cor-principal);
+    color: var(--cor-terciaria);
+    font-family: Krona One, sans-serif; 
+    display: flex;
+    flex-direction: column;
+  }
   
   .apresentacao {
     flex-direction: column;
@@ -443,7 +473,7 @@ footer {
   .descricao {
     max-width: 100%;
     margin: 0;
-    text-align: justify;
+    text-align:left;
     flex: 1;
   }
 
