@@ -507,5 +507,17 @@ footer {
     position:static;
     padding: 20px;
   }
+
+  .modal-content {
+    width: 90%;  /* Ajusta o tamanho do modal */
+    font-size: 1rem;  /* Garante que o texto esteja legível */
+    padding: 15px;  /* Ajusta o espaçamento */
+  }
+
+  .modal-overlay {
+    display: flex !important; /* Garante que o modal apareça */
+    justify-content: center;
+    align-items: center;
+  }
 }
 
