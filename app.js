@@ -38,6 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("btn-servicos")
     .addEventListener("click", function () {
-      openModal("img/Servicos.png", true); // Agora abre a imagem no modal
+      openModal("img/Servicos.png", true);
     });
 });
