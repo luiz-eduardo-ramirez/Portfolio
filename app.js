@@ -1,12 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Função para abrir o modal
-  function openModal(content) {
+  function openModal(content, isImage = false) {
     let modal = document.createElement("div");
     modal.classList.add("modal-overlay");
     modal.innerHTML = `
           <div class="modal-content">
               <span class="close-modal">&times;</span>
-              <p>${content}</p>
+              ${
+                isImage
+                  ? `<img src="${content}" alt="Imagem de Serviços">`
+                  : `<p>${content}</p>`
+              }
           </div>
       `;
     document.body.appendChild(modal);
@@ -31,7 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
     openModal("E-mail: luizeduramirez@icloud.com");
   });
 
-  document.getElementById("btn-servicos").addEventListener("click", function() {
-    modalBody.innerHTML = <img src='img/servicos.jpg' alt='Meus Serviços' style='width:100%; height:auto;'>;
-    modal.style.display = "block";
+  document
+    .getElementById("btn-servicos")
+    .addEventListener("click", function () {
+      openModal("img/Servicos.png", true); // Agora abre a imagem no modal
+    });
 });

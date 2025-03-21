@@ -14,7 +14,7 @@
   
 }
 
- .html, .body {
+ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -183,7 +183,7 @@
   width: 350px;  
   height: 350px; 
   object-fit: cover; 
-  border-radius: 50%; 
+  border-radius: 100%; 
 }
 
 .programando {
@@ -331,18 +331,6 @@ footer {
   background-color: rgba(0,0,0,0.9); 
 }
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .modal-content {
   background: var(--cor-principal);
   padding: 20px;
@@ -385,6 +373,13 @@ footer {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+.modal-content img {
+  max-width: 80%; 
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 @keyframes fadeIn {
