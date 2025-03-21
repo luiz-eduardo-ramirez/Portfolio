@@ -518,6 +518,7 @@ footer {
     display: flex !important; /* Garante que o modal apareça */
     justify-content: center;
     align-items: center;
+    z-index: 9999;
   }
 }
 
