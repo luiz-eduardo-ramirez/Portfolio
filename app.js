@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("btn-telefone")
     .addEventListener("click", function () {
-      openModal("Telefone: (11) 99998-7915");
+      window.open("https://wa.me/+5511999987915", "_blank");
     });
 
   document.getElementById("btn-email").addEventListener("click", function () {
