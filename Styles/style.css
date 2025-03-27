@@ -258,7 +258,7 @@ p {
   text-align: justify;
 }
 
-span {
+strong {
   color: var(--cor-terciaria);
   font-weight: bold;
 }
