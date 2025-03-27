@@ -152,7 +152,6 @@
   transition: 0.3s;
 }
 
-
 .projetos:hover{
     color: LightSkyBlue; 
     text-decoration: none;
@@ -170,7 +169,6 @@
     gap: 16px;
   }
   
-
 .descricao {
   max-width: 600px;
   margin-right: 20px;
@@ -242,8 +240,6 @@ nav ul li a:hover {
   min-height: 100vh;
 }
 
-
-
 .curriculo{
   margin: 0;
   padding: 0;
@@ -279,12 +275,12 @@ footer {
 }
 
 .cv-download {
-  background-color: var(--cor-terciaria);  
+  background-color: var(--cor-principal);  
   position: absolute;
   bottom: 10px;
   right: 20px;
   display: inline-block;
-  color: var(--cor-principal);
+  color: var(--cor-terciaria);
   font-weight: bold;
   text-align: right;
   padding: 12px 20px;
@@ -294,10 +290,10 @@ footer {
   box-shadow: 0px 4px 6px rgba(0, 255, 255, 0.3);
 }
 
-.btn-download:hover {
+.download-cv:hover {
   background-color: #272727; 
   box-shadow: 0px 6px 10px var(--cor-hover);
-  color: #272727;
+  color: var(--cor-terciaria);
 }
 
 
