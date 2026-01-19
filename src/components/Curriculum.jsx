@@ -18,6 +18,7 @@ const Curriculum = () => {
         <div className="lista-estudos">
           <ul>
             <li>Bacharel em Ciência da Computação - PUC-SP <a href="/docs/CCPUC.pdf" target="_blank" rel="noopener noreferrer">Acessar certificado</a></li>
+            <li>Certificação: Oracle Certified Foundations Associate<a href="/docs/eCertificate.pdf" target="_blank" rel="noopener noreferrer">Acessar certificado</a></li>
             <li>Curso: Ciência da Computação - Harvard <a href="/docs/CCH.pdf" target="_blank" rel="noopener noreferrer">Acessar certificado</a></li>
             <li>Curso: FrontEnd - Ada/Santander <a href="/docs/AdaFront.pdf" target="_blank" rel="noopener noreferrer">Acessar certificado</a></li>
             <li>Curso: Oracle One - Alura Cursos <a href="/docs/Luiz Eduardo Ramirez - Programa - One.pdf" target="_blank" rel="noopener noreferrer">Acessar certificado</a></li>
