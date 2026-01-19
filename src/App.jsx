@@ -6,6 +6,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Curriculum from './components/Curriculum';
 import Contact from './components/Contact';
+import Services from './components/Services';
 import './styles/Global.css';      // Variáveis e Layout Base
 import './styles/Header.css';      // Menu
 import './styles/Components.css';  // Botões e Imagens
@@ -23,6 +24,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/cv" element={<Curriculum />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
         
         <Footer />

@@ -38,6 +38,7 @@ const Header = () => {
           <Link to="/about" onClick={() => setIsMenuOpen(false)}>Sobre mim</Link>
           <Link to="/cv" onClick={() => setIsMenuOpen(false)}>Currículo</Link>
           <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contato</Link>
+          <Link to="/services" onClick={() => setIsMenuOpen(false)}>Serviços</Link>
         
         </div>
       </nav>
