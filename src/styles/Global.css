@@ -87,6 +87,46 @@ html, body {
   line-height: 1.2;
 }
 
+/* =========================================
+   ANIMAÇÕES GERAIS
+   ========================================= */
+
+/* Define o movimento: Começa invisível e 20px para baixo, termina visível e no lugar */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animação de entrada vindo da esquerda */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animação de entrada vindo da direita */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* Responsividade */
 @media (max-width: 1024px) {
   .apresentacao {
