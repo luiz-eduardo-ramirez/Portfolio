@@ -6,11 +6,11 @@ import Home from './components/Home';
 import About from './components/About';
 import Curriculum from './components/Curriculum';
 import Contact from './components/Contact';
-import './Styles/Global.css';      // Variáveis e Layout Base
-import './Styles/Header.css';      // Menu
-import './Styles/Components.css';  // Botões e Imagens
-import './Styles/Modal.css';       // Modais
-import './Styles/Footer.css';      // Rodapé
+import './styles/Global.css';      // Variáveis e Layout Base
+import './styles/Header.css';      // Menu
+import './styles/Components.css';  // Botões e Imagens
+import './styles/Modal.css';       // Modais
+import './styles/Footer.css';      // Rodapé
 
 function App() {
   return (
