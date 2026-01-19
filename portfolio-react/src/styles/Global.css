@@ -1,0 +1,104 @@
+:root {
+  --bg-color: #0f172a;       
+  --bg-secondary: #1e293b;   
+  --text-primary: #f8fafc;   
+  --text-secondary: #94a3b8; 
+  --accent-color: #22D4FD;   
+  --accent-glow: rgba(34, 212, 253, 0.4); 
+  
+  --font-display: 'Krona One', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  
+  --header-height: 80px;
+  --container-width: 1200px; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+html, body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+/* 1. O PAI DE TODOS */
+.inicio, 
+.sobre-mim,
+.contato,
+.curriculo {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  position: relative;
+  padding-top: var(--header-height);
+}
+
+/* 2. O MIOLO DO CONTEÚDO */
+.apresentacao {
+  flex-grow: 1; 
+  
+  /* Layout */
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  align-items: center;     
+  
+  /* LARGURA E MARGENS FIXAS */
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;    
+  
+  padding: 0 2rem; 
+  gap: 2rem;       
+}
+
+/* Títulos */
+.nome-topo, .titulo-redes {
+  font-family: var(--font-display);
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+/* Alinhamento do texto à esquerda fica mais elegante no Desktop */
+.descricao {
+    max-width: 600px; 
+}
+
+.nome-topo {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .apresentacao {
+    flex-direction: column-reverse; 
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .nome-topo {
+    font-size: 2rem;
+  }
+}

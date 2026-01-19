@@ -1,0 +1,144 @@
+/* Container de Textos */
+.descricao {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  /* Tamanhos para controle */
+  min-width: 300px; 
+  max-width: 600px;
+}
+
+/* Texto padrão */
+.descricao-texto {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  text-align: justify; 
+}
+
+/* Lista de Itens (para o Currículo) */
+.lista-experiencias, .lista-estudos ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.lista-experiencias li, .lista-estudos li {
+  background: var(--bg-secondary);
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-color);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.lista-estudos a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* Foto de Perfil (Home/Sobre) */
+.foto-perfil {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--bg-secondary);
+  box-shadow: 0 0 0 4px var(--accent-color), 0 0 30px var(--accent-glow);
+  animation: flutuar 6s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+/* Imagem "Programando" (Currículo) */
+.imagem-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.programando {
+  width: 100%;
+  max-width: 550px; 
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.modal-content img {
+  max-width: 100%;      
+  max-height: 80vh;     
+  width: auto;         
+  height: auto;         
+  object-fit: contain; 
+  display: block;
+  margin: 0 auto;       /* Centraliza a imagem */
+  border-radius: 8px;   /* Opcional: arredonda cantos */
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Botões */
+.redes-sociais {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza botões */
+  margin-top: 1rem;
+}
+
+.links, .contato-btn, .projetos {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  min-width: 160px;
+}
+
+.links:hover, .contato-btn:hover, .projetos:hover {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 20px var(--accent-glow);
+  transform: translateY(-3px);
+}
+
+.links img, .projetos img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .foto-perfil {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .descricao {
+    align-items: center; /* Centraliza tudo no mobile */
+    text-align: center;
+  }
+  
+  .descricao-texto {
+    text-align: center; /* Texto centralizado no mobile fica melhor */
+  }
+}
