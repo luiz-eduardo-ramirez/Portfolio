@@ -1,8 +1,8 @@
 import React from 'react';
-import '../styles/Services.css'; // Vamos criar esse CSS no próximo passo
+import '../styles/Services.css';
 
 const Services = () => {
-  const whatsappNumber = "5511999987915"; // Seu número (coloque o real aqui)
+  const whatsappNumber = "5511999987915"; // Seu número real
 
   const servicesList = [
     {
@@ -32,6 +32,13 @@ const Services = () => {
       icon: "🛠️",
       description: "Diagnóstico, reparo, limpeza e restauração de computadores (Desktops/Notebooks) e servidores. Garanta a vida útil e a velocidade do seu equipamento.",
       message: "Olá Luiz! Preciso de manutenção para meus computadores."
+    },
+    {
+      id: 5,
+      title: "Recuperação de Dados",
+      icon: "📼", 
+      description: "Recuperação de discos corrompidos (HDDs e SSDs). Restauração e conversão de mídias físicas antigas (CDs, DVDs, Disquetes e Fitas VHS) para formatos digitais modernos.",
+      message: "Olá Luiz! Tenho interesse em recuperação de dados ou conversão de VHS/Mídias."
     }
   ];
 
@@ -47,7 +54,7 @@ const Services = () => {
           <div 
             key={service.id} 
             className="card-servico"
-            style={{ animationDelay: `${index * 0.2}s` }} // Efeito cascata
+            style={{ animationDelay: `${index * 0.2}s` }}
           >
             <div className="icon-servico">{service.icon}</div>
             <h3>{service.title}</h3>
