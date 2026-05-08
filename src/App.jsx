@@ -1,35 +1,33 @@
 // src/App.jsx
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import About from './components/About';
-import Curriculum from './components/Curriculum';
-import Contact from './components/Contact';
-import Services from './components/Services';
-import './styles/Global.css';      // Variáveis e Layout Base
-import './styles/Header.css';      // Menu
-import './styles/Components.css';  // Botões e Imagens
-import './styles/Modal.css';       // Modais
-import './styles/Footer.css';      // Rodapé
+import './index.css';
+
+import Navbar          from './components/Navbar';
+import HeroSection     from './components/HeroSection';
+import AboutSection    from './components/AboutSection';
+import CurriculumSection from './components/CurriculumSection';
+import ProjectsSection from './components/ProjectsSection';
+import ServicesSection from './components/ServicesSection';
+import ContactSection  from './components/ContactSection';
+import FooterSection   from './components/FooterSection';
 
 function App() {
   return (
-    <Router>
-      <div className="inicio"> {/* Container global */}
-        <Header />
-        
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/cv" element={<Curriculum />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<Services />} />
-        </Routes>
-        
-        <Footer />
-      </div>
-    </Router>
+    <div className="min-h-screen bg-dark-900 text-slate-100">
+      {/* Navegação fixa */}
+      <Navbar />
+
+      {/* Seções SPA — scroll contínuo */}
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <CurriculumSection />
+        <ProjectsSection />
+        <ServicesSection />
+        <ContactSection />
+      </main>
+
+      <FooterSection />
+    </div>
   );
 }
 
