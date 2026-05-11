@@ -1,5 +1,5 @@
-// src/components/ContactSection.jsx
 import { useState } from 'react';
+import AnimateOnScroll from './AnimateOnScroll';
 
 const CONTACT_ITEMS = [
   {
@@ -69,31 +69,34 @@ const ContactSection = () => {
     <section id="contato" className="py-24 bg-dark-800">
       <div className="max-w-6xl mx-auto px-6">
         {/* Cabeçalho */}
-        <div className="flex items-center gap-4 mb-4">
+        <AnimateOnScroll animation="animate-slide-up" className="flex items-center gap-4 mb-4">
           <div className="dot-decoration" />
           <span className="text-brand-400 font-mono text-sm font-medium uppercase tracking-widest">
             Contato
           </span>
-        </div>
-        <h2 className="section-title mb-3">
+        </AnimateOnScroll>
+        <AnimateOnScroll animation="animate-slide-up" delay={100} as="h2" className="section-title mb-3">
           Vamos{' '}
           <span className="gradient-text">conversar?</span>
-        </h2>
-        <p className="section-subtitle mb-16">
+        </AnimateOnScroll>
+        <AnimateOnScroll animation="animate-slide-up" delay={200} as="p" className="section-subtitle mb-16">
           Estou disponível para projetos freelance, oportunidades de emprego e consultorias.
           Escolha a forma que preferir.
-        </p>
+        </AnimateOnScroll>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-3xl">
-          {CONTACT_ITEMS.map((item) => {
+          {CONTACT_ITEMS.map((item, index) => {
             const isEmail = item.id === 'email';
             const Tag = isEmail || !item.action ? 'div' : 'button';
             return (
-              <Tag
+              <AnimateOnScroll
                 key={item.id}
+                animation="animate-slide-up"
+                delay={200 + index * 100}
+                as={Tag}
                 onClick={isEmail ? handleEmailCopy : item.action}
                 className={`group glass rounded-2xl p-6 border border-white/10 ${item.border}
-                  transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover cursor-pointer text-left`}
+                  transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover cursor-pointer text-left w-full`}
               >
                 <div className={`${item.color} mb-4`}>{item.icon}</div>
                 <p className="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">
@@ -109,7 +112,7 @@ const ContactSection = () => {
                     )}
                   </span>
                 )}
-              </Tag>
+              </AnimateOnScroll>
             );
           })}
         </div>

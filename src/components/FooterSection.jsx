@@ -1,10 +1,11 @@
 // src/components/FooterSection.jsx
+import AnimateOnScroll from './AnimateOnScroll';
 const YEAR = new Date().getFullYear();
 
 const FooterSection = () => (
   <footer className="bg-dark-900 border-t border-white/5 py-10">
     <div className="max-w-6xl mx-auto px-6">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+      <AnimateOnScroll animation="animate-slide-up" className="flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Logo */}
         <div className="font-mono text-lg font-bold text-white">
           <span className="text-brand-400">&lt;</span>
@@ -40,16 +41,16 @@ const FooterSection = () => (
           />
           <span className="opacity-70 group-hover:opacity-100 transition-opacity">L.E. Solutions</span>
         </a>
-      </div>
+      </AnimateOnScroll>
 
-      <div className="mt-8 pt-6 border-t border-white/5 text-center">
+      <AnimateOnScroll animation="animate-fade-in" delay={300} className="mt-8 pt-6 border-t border-white/5 text-center">
         <p className="text-slate-600 text-xs">
           © {YEAR} Luiz Eduardo Ramirez. Desenvolvido com{' '}
           <span className="text-brand-500">React</span> +{' '}
           <span className="text-accent-500">Tailwind CSS</span> +{' '}
           <span className="text-slate-500">Vite</span>
         </p>
-      </div>
+      </AnimateOnScroll>
     </div>
   </footer>
 );

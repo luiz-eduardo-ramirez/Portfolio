@@ -1,4 +1,5 @@
 // src/components/CurriculumSection.jsx
+import AnimateOnScroll from './AnimateOnScroll';
 
 const EXPERIENCES = [
   {
@@ -61,19 +62,19 @@ const CurriculumSection = () => (
   <section id="curriculo" className="py-24 bg-dark-900">
     <div className="max-w-6xl mx-auto px-6">
       {/* Cabeçalho */}
-      <div className="flex items-center gap-4 mb-4">
+      <AnimateOnScroll animation="animate-slide-up" className="flex items-center gap-4 mb-4">
         <div className="dot-decoration" />
         <span className="text-brand-400 font-mono text-sm font-medium uppercase tracking-widest">
           Currículo
         </span>
-      </div>
-      <h2 className="section-title mb-3">
+      </AnimateOnScroll>
+      <AnimateOnScroll animation="animate-slide-up" delay={100} as="h2" className="section-title mb-3">
         Trajetória &{' '}
         <span className="gradient-text">Formação</span>
-      </h2>
-      <p className="section-subtitle mb-16">
+      </AnimateOnScroll>
+      <AnimateOnScroll animation="animate-slide-up" delay={200} as="p" className="section-subtitle mb-16">
         Experiências profissionais e educação acadêmica que moldaram minha carreira.
-      </p>
+      </AnimateOnScroll>
 
       <div className="grid lg:grid-cols-2 gap-16">
         {/* Experiências */}
@@ -84,7 +85,7 @@ const CurriculumSection = () => (
           </h3>
           <div className="relative pl-6 border-l border-dark-600 space-y-8">
             {EXPERIENCES.map((exp, i) => (
-              <div key={i} className="relative">
+              <AnimateOnScroll animation="animate-slide-in-left" delay={i * 100} key={i} className="relative">
                 {/* Dot na linha do tempo */}
                 <span className="absolute -left-[1.65rem] top-1.5 w-3 h-3 rounded-full bg-brand-500 border-2 border-dark-900" />
                 <div className="glass rounded-xl p-5 border border-white/5 hover:border-brand-500/20 transition-all duration-300">
@@ -97,7 +98,7 @@ const CurriculumSection = () => (
                   </div>
                   <p className="text-slate-400 text-sm leading-relaxed">{exp.desc}</p>
                 </div>
-              </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>
@@ -110,8 +111,11 @@ const CurriculumSection = () => (
           </h3>
           <div className="space-y-3">
             {EDUCATION.map((edu, i) => (
-              <a
+              <AnimateOnScroll
                 key={i}
+                animation="animate-slide-in-left"
+                delay={i * 100}
+                as="a"
                 href={edu.cert}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -128,7 +132,7 @@ const CurriculumSection = () => (
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </span>
-              </a>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>

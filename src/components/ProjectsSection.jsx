@@ -1,5 +1,5 @@
-// src/components/ProjectsSection.jsx
 import { useState, useRef, useCallback } from 'react';
+import AnimateOnScroll from './AnimateOnScroll';
 
 // ─── Dados dos projetos ───────────────────────────────────────────────────────
 const PROJECTS = [
@@ -156,9 +156,11 @@ const MediaCarousel = ({ media, title }) => {
 
 // ─── Card de projeto ──────────────────────────────────────────────────────────
 const ProjectCard = ({ project, index }) => (
-  <article
+  <AnimateOnScroll
+    animation="animate-slide-up"
+    delay={index * 150}
+    as="article"
     className="card group flex flex-col overflow-hidden p-0"
-    style={{ animationDelay: `${index * 150}ms` }}
   >
     {/* Carrossel de mídia */}
     <div className="relative">
@@ -198,12 +200,16 @@ const ProjectCard = ({ project, index }) => (
         Ver Projeto →
       </a>
     </div>
-  </article>
+  </AnimateOnScroll>
 );
 
 // ─── Card de destaque L.E. Solutions ─────────────────────────────────────────
 const LESolutionsCard = () => (
-  <article className="lg:col-span-3 relative overflow-hidden rounded-2xl border border-brand-500/30 shadow-brand-lg">
+  <AnimateOnScroll
+    animation="animate-fade-in"
+    as="article"
+    className="lg:col-span-3 relative overflow-hidden rounded-2xl border border-brand-500/30 shadow-brand-lg"
+  >
     <div className="absolute inset-0 bg-gradient-to-br from-dark-700 via-brand-950 to-dark-800" />
     <div className="absolute top-0 right-0 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl" />
     <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-500/10 rounded-full blur-3xl" />
@@ -266,25 +272,25 @@ const LESolutionsCard = () => (
         </div>
       </div>
     </div>
-  </article>
+  </AnimateOnScroll>
 );
 
 // ─── Seção principal ──────────────────────────────────────────────────────────
 const ProjectsSection = () => (
   <section id="projetos" className="py-24 bg-dark-800">
     <div className="max-w-6xl mx-auto px-6">
-      <div className="flex items-center gap-4 mb-4">
+      <AnimateOnScroll animation="animate-slide-up" className="flex items-center gap-4 mb-4">
         <div className="dot-decoration" />
         <span className="text-brand-400 font-mono text-sm font-medium uppercase tracking-widest">
           Projetos
         </span>
-      </div>
-      <h2 className="section-title mb-3">
+      </AnimateOnScroll>
+      <AnimateOnScroll animation="animate-slide-up" delay={100} as="h2" className="section-title mb-3">
         Trabalhos em <span className="gradient-text">Destaque</span>
-      </h2>
-      <p className="section-subtitle mb-16">
+      </AnimateOnScroll>
+      <AnimateOnScroll animation="animate-slide-up" delay={200} as="p" className="section-subtitle mb-16">
         Projetos reais entregues para clientes e soluções desenvolvidas por mim.
-      </p>
+      </AnimateOnScroll>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {PROJECTS.map((p, i) => (

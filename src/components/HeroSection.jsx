@@ -1,5 +1,5 @@
-// src/components/HeroSection.jsx
 import profilePic from '/img/FotoPerfil.jpg';
+import AnimateOnScroll from './AnimateOnScroll';
 
 const TECH_TAGS = ['Java', 'Spring Boot', 'React', 'Oracle Cloud', 'Linux', 'Docker'];
 
@@ -15,50 +15,50 @@ const HeroSection = () => {
       {/* Fundo decorativo */}
       <div className="absolute inset-0 bg-grid-pattern opacity-100" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl animate-pulse-slow" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent-500/10 rounded-full blur-3xl animate-pulse-slow animate-delay-700" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '700ms' }} />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-32 grid md:grid-cols-2 gap-12 items-center">
         {/* Texto */}
-        <div className="animate-slide-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-brand-500/20 text-brand-300 text-sm font-medium mb-6">
+        <div>
+          <AnimateOnScroll animation="animate-slide-up" className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-brand-500/20 text-brand-300 text-sm font-medium mb-6">
             <span className="w-2 h-2 rounded-full bg-accent-400 animate-pulse" />
             Disponível para novos projetos
-          </div>
+          </AnimateOnScroll>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+          <AnimateOnScroll animation="animate-slide-up" delay={100} as="h1" className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
             Olá, sou{' '}
             <span className="gradient-text block md:inline">Luiz Eduardo</span>
-          </h1>
+          </AnimateOnScroll>
 
-          <p className="text-xl text-brand-300 font-semibold mb-4">
+          <AnimateOnScroll animation="animate-slide-up" delay={200} as="p" className="text-xl text-brand-300 font-semibold mb-4">
             Desenvolvedor Full Stack & Consultor de TI
-          </p>
+          </AnimateOnScroll>
 
-          <p className="text-slate-400 text-base leading-relaxed mb-8 max-w-lg">
+          <AnimateOnScroll animation="animate-slide-up" delay={300} as="p" className="text-slate-400 text-base leading-relaxed mb-8 max-w-lg">
             Focado em Java, Spring Boot e React. Com background sólido como Analista de TI,
             trago visão sistêmica ao desenvolvimento — unindo técnica e comunicação clara
             para construir soluções robustas.
-          </p>
+          </AnimateOnScroll>
 
           {/* Tech tags */}
-          <div className="flex flex-wrap gap-2 mb-10">
+          <AnimateOnScroll animation="animate-fade-in" delay={400} className="flex flex-wrap gap-2 mb-10">
             {TECH_TAGS.map(t => (
               <span key={t} className="tag">{t}</span>
             ))}
-          </div>
+          </AnimateOnScroll>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-4">
+          <AnimateOnScroll animation="animate-fade-in" delay={500} className="flex flex-wrap gap-4">
             <button onClick={() => scrollTo('#projetos')} className="btn-primary">
               Ver Projetos →
             </button>
             <button onClick={() => scrollTo('#contato')} className="btn-outline">
               Entre em Contato
             </button>
-          </div>
+          </AnimateOnScroll>
 
           {/* Social */}
-          <div className="flex items-center gap-4 mt-10">
+          <AnimateOnScroll animation="animate-fade-in" delay={600} className="flex items-center gap-4 mt-10">
             <a
               href="https://www.linkedin.com/in/luiz-ramirez"
               target="_blank" rel="noopener noreferrer"
@@ -80,11 +80,11 @@ const HeroSection = () => {
               </svg>
             </a>
             <span className="text-slate-600 text-sm">luizeduramirez@icloud.com</span>
-          </div>
+          </AnimateOnScroll>
         </div>
 
         {/* Foto */}
-        <div className="relative flex items-center justify-center animate-slide-in-left animate-delay-200">
+        <AnimateOnScroll animation="animate-slide-in-left" delay={200} className="relative flex items-center justify-center">
           {/* Decoração giratória */}
           <div className="absolute w-72 h-72 md:w-96 md:h-96 rounded-full border border-brand-500/20 animate-spin-slow" />
           <div className="absolute w-64 h-64 md:w-80 md:h-80 rounded-full border border-brand-500/10 animate-spin-slow" style={{ animationDirection: 'reverse' }} />
@@ -103,7 +103,7 @@ const HeroSection = () => {
             <p className="text-xs text-slate-400">Formado em</p>
             <p className="text-sm font-bold text-white">PUC-SP — Ciência da Computação</p>
           </div>
-        </div>
+        </AnimateOnScroll>
       </div>
 
       {/* Scroll indicator */}

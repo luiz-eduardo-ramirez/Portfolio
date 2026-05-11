@@ -1,4 +1,5 @@
 // src/components/ServicesSection.jsx
+import AnimateOnScroll from './AnimateOnScroll';
 
 const SERVICES = [
   {
@@ -64,28 +65,30 @@ const ServicesSection = () => (
   <section id="servicos" className="py-24 bg-dark-900">
     <div className="max-w-6xl mx-auto px-6">
       {/* Cabeçalho */}
-      <div className="flex items-center gap-4 mb-4">
+      <AnimateOnScroll animation="animate-slide-up" className="flex items-center gap-4 mb-4">
         <div className="dot-decoration" />
         <span className="text-brand-400 font-mono text-sm font-medium uppercase tracking-widest">
           Serviços
         </span>
-      </div>
-      <h2 className="section-title mb-3">
+      </AnimateOnScroll>
+      <AnimateOnScroll animation="animate-slide-up" delay={100} as="h2" className="section-title mb-3">
         O que posso{' '}
         <span className="gradient-text">fazer por você</span>
-      </h2>
-      <p className="section-subtitle mb-16">
+      </AnimateOnScroll>
+      <AnimateOnScroll animation="animate-slide-up" delay={200} as="p" className="section-subtitle mb-16">
         Soluções tecnológicas sob medida para o seu negócio ou necessidade pessoal.
         Orçamento sem compromisso via WhatsApp.
-      </p>
+      </AnimateOnScroll>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {SERVICES.map((service, index) => (
-          <article
+          <AnimateOnScroll
             key={service.id}
+            animation="animate-slide-up"
+            delay={index * 100}
+            as="article"
             className={`relative group glass rounded-2xl p-6 border transition-all duration-300
               hover:-translate-y-2 hover:shadow-card-hover ${service.border}`}
-            style={{ animationDelay: `${index * 100}ms` }}
           >
             {/* Gradiente de fundo */}
             <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
@@ -117,12 +120,12 @@ const ServicesSection = () => (
                 💬 Solicitar Orçamento
               </a>
             </div>
-          </article>
+          </AnimateOnScroll>
         ))}
       </div>
 
       {/* Banner bottom */}
-      <div className="mt-12 glass rounded-2xl p-6 md:p-8 border border-brand-500/20 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <AnimateOnScroll animation="animate-fade-in" className="mt-12 glass rounded-2xl p-6 md:p-8 border border-brand-500/20 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div>
           <h3 className="text-xl font-bold text-white mb-1">Não encontrou o que precisa?</h3>
           <p className="text-slate-400 text-sm">
@@ -137,7 +140,7 @@ const ServicesSection = () => (
         >
           📞 Falar agora
         </a>
-      </div>
+      </AnimateOnScroll>
     </div>
   </section>
 );

@@ -1,5 +1,5 @@
-// src/components/AboutSection.jsx
 import profilePic from '/img/FotoPerfil.jpg';
+import AnimateOnScroll from './AnimateOnScroll';
 
 const SKILLS = [
   { category: 'Backend',      items: ['Java 17+', 'Spring Boot', 'REST APIs', 'JPA / Hibernate'] },
@@ -12,16 +12,16 @@ const AboutSection = () => (
   <section id="sobre" className="py-24 bg-dark-800">
     <div className="max-w-6xl mx-auto px-6">
       {/* Cabeçalho */}
-      <div className="flex items-center gap-4 mb-16">
+      <AnimateOnScroll animation="animate-slide-up" className="flex items-center gap-4 mb-16">
         <div className="dot-decoration" />
         <span className="text-brand-400 font-mono text-sm font-medium uppercase tracking-widest">
           Sobre mim
         </span>
-      </div>
+      </AnimateOnScroll>
 
       <div className="grid lg:grid-cols-2 gap-16 items-start">
         {/* Texto */}
-        <div>
+        <AnimateOnScroll animation="animate-slide-up" delay={100}>
           <h2 className="section-title mb-6">
             Desenvolvedor que pensa além do{' '}
             <span className="gradient-text">código</span>
@@ -65,12 +65,17 @@ const AboutSection = () => (
               Ver LinkedIn
             </a>
           </div>
-        </div>
+        </AnimateOnScroll>
 
         {/* Skills grid */}
         <div className="grid sm:grid-cols-2 gap-4">
-          {SKILLS.map(({ category, items }) => (
-            <div key={category} className="card">
+          {SKILLS.map(({ category, items }, index) => (
+            <AnimateOnScroll
+              key={category}
+              animation="animate-slide-up"
+              delay={100 + index * 100}
+              className="card"
+            >
               <h3 className="text-sm font-semibold text-brand-400 uppercase tracking-widest mb-3">
                 {category}
               </h3>
@@ -82,7 +87,7 @@ const AboutSection = () => (
                   </li>
                 ))}
               </ul>
-            </div>
+            </AnimateOnScroll>
           ))}
         </div>
       </div>
