@@ -9,6 +9,7 @@ import ProjectsSection from './components/ProjectsSection';
 import ServicesSection from './components/ServicesSection';
 import ContactSection  from './components/ContactSection';
 import FooterSection   from './components/FooterSection';
+import CookieConsent   from './components/CookieConsent';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       </main>
 
       <FooterSection />
+      <CookieConsent />
     </div>
   );
 }
