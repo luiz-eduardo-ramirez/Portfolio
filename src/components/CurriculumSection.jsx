@@ -5,7 +5,7 @@ const EXPERIENCES = [
   {
     role:    'Analista de TI',
     company: 'Unimais',
-    period:  '2024 – 2025',
+    period:  '09/2025 – 2026',
     desc:    'Gestão e suporte de infraestrutura, manutenção de sistemas e atendimento a chamados técnicos.',
     icon:    '🏢',
   },
@@ -17,10 +17,10 @@ const EXPERIENCES = [
     icon:    '🎓',
   },
   {
-    role:    'Consultor de TI & Desenvolvedor Web',
-    company: 'Freelancer / L.E. Solutions',
+    role:    'Desenvolvedor Full Stack',
+    company: 'L.E. Solutions',
     period:  '2019 – Atual',
-    desc:    'Desenvolvimento de projetos web, consultoria em infraestrutura e manutenção de sistemas para clientes variados.',
+    desc:    'Desenvolvimento de projetos Full Stack, consultoria em desenvolvimento e manutenção de sistemas para clientes variados.',
     icon:    '💻',
   },
 ];
