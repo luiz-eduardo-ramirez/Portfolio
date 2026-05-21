@@ -5,14 +5,14 @@ const EXPERIENCES = [
   {
     role:    'Analista de TI',
     company: 'Unimais',
-    period:  '09/2025 – 2026',
+    period:  '09/2025 – 01/2026',
     desc:    'Gestão e suporte de infraestrutura, manutenção de sistemas e atendimento a chamados técnicos.',
     icon:    '🏢',
   },
   {
     role:    'Auxiliar de Suporte de TI',
     company: 'Fundação São Paulo',
-    period:  '2022 – 2023',
+    period:  '06/2022 – 07/2023',
     desc:    'Suporte técnico N1/N2, configuração de estações de trabalho e atendimento a usuários.',
     icon:    '🎓',
   },
