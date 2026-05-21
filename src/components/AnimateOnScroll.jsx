@@ -9,7 +9,8 @@ const AnimateOnScroll = ({
   className = '',
   rootMargin = '0px 0px -50px 0px',
   threshold = 0.1,
-  as: Component = 'div'
+  as: Component = 'div',
+  ...rest
 }) => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -51,6 +52,7 @@ const AnimateOnScroll = ({
       ref={ref}
       style={style}
       className={`${isVisible ? animation : 'opacity-0'} ${className}`}
+      {...rest}
     >
       {children}
     </Component>
