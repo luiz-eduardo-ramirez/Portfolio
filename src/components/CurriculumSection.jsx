@@ -49,7 +49,7 @@ const EDUCATION = [
   {
     title: 'Oracle ONE',
     institution: 'Alura Cursos',
-    cert: '/docs/Luiz Eduardo Ramirez - Programa - One.pdf',
+    cert: '/docs/Luiz Eduardo Ramirez - Programa - ONE.pdf',
   },
   {
     title: 'Git & GitHub: Colaboração em Projetos',

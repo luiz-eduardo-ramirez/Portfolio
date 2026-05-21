@@ -2,7 +2,7 @@ import profilePic from '/img/FotoPerfil.jpg';
 import AnimateOnScroll from './AnimateOnScroll';
 
 const SKILLS = [
-  { category: 'Backend',      items: ['Java 17+', 'Spring Boot', 'REST APIs', 'JPA / Hibernate'] },
+  { category: 'Backend',      items: ['Java 8+', 'Spring Boot', 'REST APIs', 'JPA / Hibernate'] },
   { category: 'Frontend',     items: ['React', 'Tailwind CSS', 'JavaScript ES2024', 'Vite'] },
   { category: 'Infraestrutura', items: ['Oracle Cloud (OCI)', 'Linux / Shell', 'Docker', 'Git / GitHub'] },
   { category: 'Database',     items: ['PostgreSQL', 'MySQL', 'Oracle DB', 'MongoDB'] },
