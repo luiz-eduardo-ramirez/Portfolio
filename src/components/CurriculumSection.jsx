@@ -19,7 +19,7 @@ const EXPERIENCES = [
   {
     role:    'Desenvolvedor Full Stack',
     company: 'L.E. Solutions',
-    period:  '2019 – Atual',
+    period:  '01/2019 – Atual',
     desc:    'Desenvolvimento de projetos Full Stack, consultoria em desenvolvimento e manutenção de sistemas para clientes variados.',
     icon:    '💻',
   },
