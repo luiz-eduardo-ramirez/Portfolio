@@ -49,6 +49,33 @@ const PROJECTS = [
       '/projetos/churn-2.png',
     ],
   },
+  {
+    id: 'havana-intel',
+    title: 'Havana Intel',
+    description:
+      'Plataforma B2B de inteligência competitiva: robôs coletam preços de concorrentes e um painel com login mostra tudo em gráficos para a gestão decidir rápido.',
+    url: 'https://havana-intel.vercel.app/login',
+    tags: ['Next.js', 'Python FastAPI', 'Playwright', 'PostgreSQL'],
+    status: 'Demo',
+    media: [
+      '/projetos/havana-intel-1.png',
+      '/projetos/havana-intel-2.png',
+      '/projetos/havana-intel-3.png',
+    ],
+  },
+  {
+    id: 'justina-virtual',
+    title: 'Justina Virtual',
+    description:
+      'Telemetria em tempo real e baixa latência entre um simulador de cirurgia robótica e o painel de monitoramento, via WebSocket.',
+    url: 'https://s02-26-e25-justina-virtual.vercel.app/',
+    tags: ['Java Spring Boot', 'Node.js', 'WebSocket'],
+    status: 'Demo',
+    media: [
+      '/projetos/justina-1.png',
+      '/projetos/justina-2.png',
+    ],
+  },
 ];
 
 // ─── Utilitário: detecta vídeo ────────────────────────────────────────────────
